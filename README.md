@@ -1,16 +1,134 @@
-## Hi there 👋
+salut
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-<!--
-**B-benja1/B-benja1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
 
-Here are some ideas to get you started:
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        nav a:hover {
+            color: #f4f4f4;
+        }
+
+        header, section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .projects img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .projects img:hover {
+            transform: scale(1.1);
+        }
+
+        form input, form textarea {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Accueil -->
+    <header id="accueil">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Je suis développeur web spécialisé en HTML, CSS, et JavaScript</p>
+    </header>
+
+    <!-- À propos -->
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis un passionné de technologies avec plusieurs projets en développement web. J'adore explorer les nouvelles tendances et construire des solutions efficaces.</p>
+    </section>
+    <section id="skills">
+        <h2>Mes compétences</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="projects">
+        <h2>Mes projets</h2>
+        <div>
+            <img src="https://via.placeholder.com/100" alt="Projet 1">
+            <img src="https://via.placeholder.com/100" alt="Projet 2">
+            <img src="https://via.placeholder.com/100" alt="Projet 3">
+        </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="MBAINAISSEM MBERKOUBOU BENJAMIN">
+            <input type="email" id="email" placeholder="mbainaissembenjamin151@gmail.com>
+            <textarea id="message" placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <script>
+        // Validation du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            if (name === '' || email === '') {
+                alert('Veuillez remplir tous les champs');
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
